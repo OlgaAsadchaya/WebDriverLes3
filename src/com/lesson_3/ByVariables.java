@@ -10,10 +10,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-
 class ByVariables {
     WebDriver tutBy;
-
 
     @Test
     void variables() {
@@ -25,15 +23,15 @@ class ByVariables {
         assertNotNull(byCssSelector);
         WebElement byName = tutBy.findElement(By.name("login"));
         assertNotNull(byName);
-        WebElement byClassName= tutBy.findElement(By.className("auth__enter"));
+        WebElement byClassName = tutBy.findElement(By.className("auth__enter"));
         assertNotNull(byClassName);
-        WebElement byId= tutBy.findElement(By.id("geotarget_top_selector"));
+        WebElement byId = tutBy.findElement(By.id("geotarget_top_selector"));
         assertNotNull(byId);
-        WebElement byLinkText= tutBy.findElement(By.linkText("Афиша"));
+        WebElement byLinkText = tutBy.findElement(By.linkText("Афиша"));
         assertNotNull(byLinkText);
-        WebElement byPartialLinkText= tutBy.findElement(By.partialLinkText("Афиша"));
+        WebElement byPartialLinkText = tutBy.findElement(By.partialLinkText("Афиша"));
         assertNotNull(byPartialLinkText);
-        WebElement byXpath= tutBy.findElement(By.xpath("//div[@data-id]"));
+        WebElement byXpath = tutBy.findElement(By.xpath("//div[@data-id]"));
         assertNotNull(byXpath);
     }
 }

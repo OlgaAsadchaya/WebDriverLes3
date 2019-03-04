@@ -15,7 +15,7 @@ class LoginTest {
 
     @BeforeEach
     void setUp() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\SergeyA\\Downloads\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         tutBy = new ChromeDriver();
         tutBy.get("https://tut.by");
     }
@@ -32,6 +32,5 @@ class LoginTest {
         tutBy.findElement(By.name("password")).sendKeys("123456789zxcvbn");
         tutBy.findElement(By.className("auth__enter")).click();
         assertEquals(tutBy.findElement(By.className("uname")).getText(), "Selenium Test");
-
     }
 }
